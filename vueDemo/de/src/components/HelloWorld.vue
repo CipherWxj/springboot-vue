@@ -6,7 +6,7 @@
           v-model="search"
           class="search_name"
           style="width:250px"
-          placeholder="输入姓名查询">
+          placeholder="输入姓名">
         </el-input>
       </el-form-item>
       <el-form-item>
