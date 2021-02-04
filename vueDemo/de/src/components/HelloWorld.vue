@@ -155,6 +155,7 @@
         data() {
             return {
                 ruleForm: {
+                    number:'',
                     name: '',
                     id: '',
                     mobile: ''
@@ -274,6 +275,7 @@
 
             addUser() {
                 let postData = this.qs.stringify({
+                    number:this.ruleForm.number,
                     id: this.ruleForm.id,
                     name: this.ruleForm.name,
                     mobile: this.ruleForm.mobile
@@ -307,6 +309,7 @@
 
             updateUser() {
                 let postData = this.qs.stringify({
+                    number:this.ruleForm.number,
                     id: this.ruleForm.id,
                     name: this.ruleForm.name,
                     mobile: this.ruleForm.mobile
