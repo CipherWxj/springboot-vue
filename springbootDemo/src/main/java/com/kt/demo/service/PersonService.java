@@ -19,7 +19,7 @@ public class PersonService {
 
     public void  delete(String number){ personDao.delete(number); }
 
-    public int update(Person p){personDao.update(p);return 1; }
+    public void update(Person p){ personDao.update(p); }
 
     public Person getPersonByNumber(int number){ return personDao.getPersonByNumber(number); }
 

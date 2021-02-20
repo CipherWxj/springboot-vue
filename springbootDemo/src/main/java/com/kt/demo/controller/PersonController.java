@@ -1,3 +1,4 @@
+
 package com.kt.demo.controller;
 
 import com.kt.demo.model.Person;
@@ -14,46 +15,58 @@ public class PersonController {
     @Resource
    PersonService personService;
 
-    //显示所有列表信息
-    @GetMapping ("/show")
+    /**
+    *显示所有列表信息
+     */
+    @GetMapping("/show")
     public List<Person> show() {
         return personService.getAll();
     }
 
-    //增加
+    /**
+    *增加
+     */
     @PostMapping("/add")
     public void add(Person person){
         System.out.println(person);
         personService.add(person);
     }
 
-    //删除
-    @PostMapping ("/del")
+    /**
+    *删除
+     */
+    @DeleteMapping("/del")
     public void del(String number) {
         personService.delete(number);
     }
 
-    //修改
-    @PostMapping("/edit")
+    /**
+    *修改
+     */
+    @PutMapping("/edit")
     public void edit(Person person){
         personService.update(person);
     }
 
-    //number查询
-    @PostMapping ("/select")
+    /**
+    *number查询
+     */
+    @GetMapping("/select")
     public Person queryNumber(int number) {
         return personService.getPersonByNumber(number);
     }
 
-    //姓名查询
-    @PostMapping ("/query")
+    /**
+    *姓名查询
+     */
+    @GetMapping("/query")
     public List<Person> queryName(String name) {
         return personService.getPersonByName(name);
     }
 
     /**
-     * 分页
-     * @return
+     *分页
+     @return
      */
     @PostMapping ("/page")
     public List<Person> page(Integer page){
@@ -65,8 +78,8 @@ public class PersonController {
     }
 
     /**
-     * rows
-     * @return
+     *rows
+     @return
      */
     @PostMapping ("/rows")
     @ResponseBody

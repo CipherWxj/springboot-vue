@@ -32,7 +32,7 @@
 </delete>
 
 <!-- 改 -->
-<update id="update">
+<update id="update" parameterType="com.kt.demo.model.Person">
     UPDATE
     person
     SET

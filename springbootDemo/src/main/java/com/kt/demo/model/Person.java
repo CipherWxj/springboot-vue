@@ -31,7 +31,6 @@ public class Person {
 
     public void setMobile(String mobile) { this.mobile = mobile; }
 
-    // 右键 Generate -> toString() -> 全选 -> ok 生成如下代码
     @Override
     public String toString() {
         return "Person{" +
